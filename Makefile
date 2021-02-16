@@ -6,7 +6,7 @@
 #    By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/16 18:31:43 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/02/16 23:48:24 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/02/16 23:58:43 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRC = ft_isalnum.c \
 	ft_isdigit.c \
 	ft_strlen.c \
 	ft_isprint.c \
-	ft_toupper.c
+	ft_toupper.c \
+	ft_tolower.c
 
 OBJ = *.o 
 
