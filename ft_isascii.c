@@ -6,15 +6,15 @@
 /*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 17:52:28 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/14 18:25:47 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/16 14:57:48 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int arg)
+int	ft_isascii(int c)
 {
-	if (arg >= 0 && arg <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

@@ -6,16 +6,16 @@
 /*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 17:22:15 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/14 17:30:27 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/16 14:58:53 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int argument)
+int	ft_isalnum(int c)
 {
-	if ((argument >= '0' && argument <= '9') || (argument >= 'a' &&
-	argument <= 'z') || (argument >= 'A' && argument <= 'Z'))
+	if ((c >= '0' && c <= '9') || (c >= 'a' &&
+	c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);

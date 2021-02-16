@@ -6,17 +6,17 @@
 /*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 12:25:55 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/14 13:06:26 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/16 14:58:16 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int argument)
+int	ft_isalpha(int c)
 {
-	if (argument >= 'a' && argument <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (1);
-	if (argument >= 'A' && argument <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (2);
 	else
 		return (0);
