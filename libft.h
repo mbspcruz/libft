@@ -6,7 +6,7 @@
 /*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:25:41 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/16 23:58:28 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/17 18:28:22 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int ft_isascii(int c);
 int	ft_isprint(int c);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
+int ft_atoi(const char *str);
 
 #endif
