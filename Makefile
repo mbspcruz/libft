@@ -6,7 +6,7 @@
 #    By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/16 18:31:43 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/02/18 21:11:55 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/02/18 22:50:08 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,10 @@ SRC = ft_isalnum.c \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_atoi.c \
-	ft_strncmp.c\
-	ft_bzero.c\
-	ft_memset.c
+	ft_strncmp.c \
+	ft_bzero.c \
+	ft_memset.c \
+	ft_memcpy.c	
 
 OBJ = *.o 
 
