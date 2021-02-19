@@ -6,7 +6,7 @@
 #    By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/16 18:31:43 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/02/19 20:34:47 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/02/19 23:41:21 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRC = ft_isalnum.c \
 	ft_memset.c \
 	ft_memcpy.c	\
 	ft_strlcpy.c \
-	ft_strlcat.c
+	ft_strlcat.c \
+	ft_strchr.c 
 OBJ = *.o 
 
 INC = libft.h

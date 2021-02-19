@@ -6,7 +6,7 @@
 /*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:25:41 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/19 20:37:02 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/19 23:41:46 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ size_t	ft_strlen(char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+char	*ft_strchr(const char *s, int c)
 
 #endif
