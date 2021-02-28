@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/02/16 18:31:43 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/02/27 18:49:38 by mda-cruz         ###   ########.fr        #
+#    Created: 2021/02/28 13:24:58 by mda-cruz          #+#    #+#              #
+#    Updated: 2021/02/28 15:26:16 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libft.a
 
@@ -34,23 +35,25 @@ SRC = ft_isalnum.c \
 	ft_memmove.c \
 	ft_memchr.c \
 	ft_memcmp.c
-	
-OBJ = *.o 
 
-INC = libft.h
+SRCSO=${SRC:.c=.o}
 
 all: $(NAME)
 
-$(NAME):
-	@gcc -c -Wall -Wextra -Werror $(SRC) $(INC)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+$(NAME):$(SRCSO)
+	ar rc $(NAME) $(SRCSO)
+	ranlib $(NAME)
 
-clean: 
-	@/bin/rm -f $(OBJ)
+$(SRCSO):
+	gcc -Wall -Wextra -Werror -c $(SRC)
 
+so:
+	cc -shared -o libft.so -fPIC ft*.c 
+
+clean:
+	rm -f *.o
 
 fclean: clean
-	@/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

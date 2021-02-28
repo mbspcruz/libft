@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:09:33 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/17 18:24:22 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/28 18:39:48 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int i;
 	int sign;
-	int res;
+	unsigned long res;
 
 	i = 0;
 	sign = 1;
@@ -35,5 +35,9 @@ int	ft_atoi(const char *str)
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
+	if (res > 9223372036854775807UL && sign == 1)
+		return (-1);
+	else if(res > 9223372036854775808UL && sign == -1)
+		return (0);
 	return (sign * res);
 }

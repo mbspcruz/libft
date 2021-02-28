@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 18:12:43 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/19 20:33:04 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/28 18:44:44 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t j;
 	size_t res;
 
+	if (size == 0)
+		return(0);
 	i = 0;
 	while (dst[i] != '\0')
 		i++;
