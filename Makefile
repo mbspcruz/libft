@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/16 18:31:43 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/02/19 23:41:21 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/02/27 18:49:38 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,13 @@ SRC = ft_isalnum.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
 	ft_strchr.c \
-	ft_strrchr.c
+	ft_strrchr.c \
+	ft_strnstr.c \
+	ft_memccpy.c \
+	ft_memmove.c \
+	ft_memchr.c \
+	ft_memcmp.c
+	
 OBJ = *.o 
 
 INC = libft.h

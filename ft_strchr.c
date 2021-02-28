@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mda-cruz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 22:05:47 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/19 23:40:45 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/27 18:13:28 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	int i;
 
+	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
@@ -23,5 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] != c && s[i] == '\0')
-		return (NULL);
+		return (0);
+	return (0);
 }
