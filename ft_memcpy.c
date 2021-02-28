@@ -6,7 +6,7 @@
 /*   By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 21:35:07 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/27 18:06:46 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/02/28 19:08:44 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	str2 = (unsigned char *)dest;
 	str1 = (unsigned char *)src;
+	if (str1 == NULL && str2 == NULL)
+		return (NULL);		
 	while (n > 0)
 	{
 		str2[n - 1] = str1[n - 1];
