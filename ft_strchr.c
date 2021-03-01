@@ -6,7 +6,7 @@
 /*   By: mda-cruz <mda-cruz@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 22:05:47 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/02/27 18:13:28 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/01 20:07:35 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (s[i] != c && s[i] == '\0')
-		return (0);
+	if (c == 0)
+		return ((char *)s + i);
 	return (0);
 }
