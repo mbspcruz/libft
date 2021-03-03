@@ -6,7 +6,7 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:09:33 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/03 17:35:11 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/03 18:00:08 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	while (str[i] != '\0' && (str[i] == ' ' || str[i] >= 8 && str[i] <= 13))
+	while ((str[i] >= 8 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{

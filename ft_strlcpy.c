@@ -6,7 +6,7 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 00:23:46 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/03 17:21:38 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/03 18:49:15 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t i;
 
 	i = 0;
+	if(!dest || ! src)
+		return (0);
 	if (size == 0)
-	{
-		while (src[i])
-			i++;
-		return (i);
-	}
+		return (ft_strlen(src));
 	while (src[i] != '\0' && i < (size - 1))
 	{
 		dest[i] = src[i];
