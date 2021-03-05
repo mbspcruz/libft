@@ -6,7 +6,7 @@
 #    By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/28 13:24:58 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/03/04 16:01:20 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/03/05 17:50:46 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ SRC = ft_isalnum.c \
 	ft_memmove.c \
 	ft_memchr.c \
 	ft_memcmp.c \
-	ft_calloc.c
+	ft_calloc.c \
+	ft_strdup.c
 
 SRCSO=${SRC:.c=.o}
 
