@@ -36,7 +36,8 @@ SRC = ft_isalnum.c \
 	ft_memchr.c \
 	ft_memcmp.c \
 	ft_calloc.c \
-	ft_strdup.c
+	ft_strdup.c \
+	ft_substr.c
 
 SRCSO=${SRC:.c=.o}
 
