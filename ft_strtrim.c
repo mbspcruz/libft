@@ -6,7 +6,7 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 17:07:55 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/12 13:27:49 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/12 13:48:11 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	if (start == end)
-		return (ft_strdup(""));
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	ptr = ft_substr(s1, start, end - start);
