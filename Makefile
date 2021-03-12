@@ -6,7 +6,7 @@
 #    By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/28 13:24:58 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/03/12 15:40:45 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/03/12 19:31:52 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,11 +40,14 @@ SRC = ft_isalnum.c \
 	ft_substr.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_itoa.c
+	ft_putnbr_fd.c 
+	
 SRCSO=${SRC:.c=.o}
 
 all: $(NAME)
