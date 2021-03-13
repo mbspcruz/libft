@@ -6,7 +6,7 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 00:23:46 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/03 18:49:15 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/13 16:57:30 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t i;
 
 	i = 0;
-	if(!dest || ! src)
+	if (!dest || !src)
 		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
