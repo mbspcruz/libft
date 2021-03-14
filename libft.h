@@ -6,7 +6,7 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:25:41 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/14 16:43:02 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/14 16:52:44 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ struct s_list *next;
 } t_list;
 
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-int ft_lstsize(t_list *lst);
+int	ft_lstsize(t_list *lst);
 #endif
