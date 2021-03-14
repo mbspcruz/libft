@@ -6,7 +6,7 @@
 #    By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/28 13:24:58 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/03/14 16:32:38 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/03/14 16:43:17 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRC = ft_isalnum.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_lstnew.c \
-	ft_lstadd_front.c
+	ft_lstadd_front.c \
+	ft_lstsize.c
 	
 SRCSO=${SRC:.c=.o}
 
