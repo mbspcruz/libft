@@ -6,7 +6,7 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 19:25:41 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/14 17:23:41 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/14 17:29:28 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void
 *));
 void	ft_lstclear(t_list **lst, void (*del)(void
 *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 int	ft_lstsize(t_list *lst);
 #endif
