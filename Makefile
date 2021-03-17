@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mda-cruz <mda-cruz@student.42.fr>          +#+  +:+       +#+         #
+#    By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/28 13:24:58 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/03/17 15:13:25 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/03/17 21:35:45 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,17 +47,20 @@ SRC = ft_isalnum.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
-	ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstsize.c \
-	ft_lstlast.c \
-	ft_lstadd_back.c \
-	ft_lstdelone.c \
-	ft_lstclear.c \
-	ft_lstiter.c \
-	ft_lstmap.c
+	
+BONUS = ft_lstadd_back.c \
+		ft_lstadd_front.c \
+		ft_lstclear.c \
+		ft_lstdelone.c \
+		ft_lstiter.c \
+		ft_lstlast.c \
+		ft_lstmap.c \
+		ft_lstnew.c \
+		ft_lstsize.c
+
 	
 SRCSO=${SRC:.c=.o}
+BONUS_OBJS  = $(BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -68,6 +71,8 @@ $(NAME):$(SRCSO)
 $(SRCSO):
 	gcc -Wall -Wextra -Werror -c $(SRC)
 
+bonus: ${NAME} ${BONUS} ${BONUS_OBJS}
+    ar -rs ${NAME} ${SRCSO} ${BONUS_OBJS}
 so:
 	cc -shared -o libft.so -fPIC ft*.c 
 
