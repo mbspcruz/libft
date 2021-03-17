@@ -6,7 +6,7 @@
 #    By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/28 13:24:58 by mda-cruz          #+#    #+#              #
-#    Updated: 2021/03/17 21:35:45 by mda-cruz         ###   ########.fr        #
+#    Updated: 2021/03/17 22:16:28 by mda-cruz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ $(SRCSO):
 	gcc -Wall -Wextra -Werror -c $(SRC)
 
 bonus: ${NAME} ${BONUS} ${BONUS_OBJS}
-    ar -rs ${NAME} ${SRCSO} ${BONUS_OBJS}
+	ar -rs ${NAME} ${OBJ} ${BONUS_OBJS}
 so:
 	cc -shared -o libft.so -fPIC ft*.c 
 
