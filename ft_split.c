@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: mda-cruz <mda-cruz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 19:21:04 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/13 16:32:28 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/18 11:54:54 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ static int	count_words(char const *str, char c)
 	int	state;
 
 	counter = 0;
-	state = 0;
+	state = 1;
 	while (*str)
 	{
 		if (*str == c)
-			state = 0;
-		else if (state == 0)
-		{
 			state = 1;
-			++counter;
+		else if (*str != c && state)
+		{
+			state = 0;
+			counter++;
 		}
-		++str;
+		str++;
 	}
 	return (counter);
 }
@@ -49,13 +49,13 @@ char		**ft_split(char const *s, char c)
 	char	**words_array;
 	int		i;
 
-	if (!s || !c)
+	if (!s)
 		return (0);
 	word_count = count_words(s, c);
 	words_array = (char **)malloc(sizeof(char *) * (word_count + 1));
-	i = 0;
 	if (!words_array)
 		return (0);
+	i = 0;
 	while (i < word_count)
 	{
 		if (*s == c)
