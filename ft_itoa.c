@@ -6,33 +6,52 @@
 /*   By: mda-cruz <user@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 13:05:05 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/12 18:40:44 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/20 17:20:00 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	len_n(long n)
 {
-	char *ptr;
+	int len;
 
-	ptr = (char *)malloc((sizeof(char)) * 2);
-	if (!ptr)
-		return (0);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+	len = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
+		len++;
+	while (n != 0)
 	{
-		ptr[0] = '-';
-		ptr[1] = '\0';
-		ptr = ft_strjoin(ptr, ft_itoa(-n));
+		n /= 10;
+		len++;
 	}
-	else if (n >= 10)
-		ptr = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else
+	return (len);
+}
+
+char		*ft_itoa(int n)
+{
+	char	*str;
+	int		size;
+	long	nb;
+
+	nb = n;
+	size = len_n(nb);
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
+		return (0);
+	str[size] = '\0';
+	if (nb == 0)
+		str[0] = '0';
+	if (nb < 0)
 	{
-		ptr[0] = (n + '0');
-		ptr[1] = '\0';
+		str[0] = '-';
+		nb *= -1;
 	}
-	return (ptr);
+	while (nb > 0)
+	{
+		str[size - 1] = (nb % 10) + '0';
+		nb /= 10;
+		size--;
+	}
+	return (str);
 }
