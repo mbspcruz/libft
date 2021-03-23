@@ -6,7 +6,7 @@
 /*   By: mda-cruz <mda-cruz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 01:13:13 by mda-cruz          #+#    #+#             */
-/*   Updated: 2021/03/17 16:20:45 by mda-cruz         ###   ########.fr       */
+/*   Updated: 2021/03/23 17:13:24 by mda-cruz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (little[i] == '\0' || little[i] == 0)
 		return ((char*)big);
-	while (big[i] && i < len - 1)
+	while (big[i] && i <= len - 1)
 	{
 		j = 0;
 		while (big[i + j] == little[j] && i + j < len)
